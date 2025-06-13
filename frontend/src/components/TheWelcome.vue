@@ -5,11 +5,29 @@ import ToolingIcon from './icons/IconTooling.vue'
 import EcosystemIcon from './icons/IconEcosystem.vue'
 import CommunityIcon from './icons/IconCommunity.vue'
 import SupportIcon from './icons/IconSupport.vue'
+import { ref, onMounted } from 'vue'
 
 const openReadmeInEditor = () => fetch('/__open-in-editor?file=README.md')
+const backendMessage = ref('')
+
+// Fetch data from backend when component mounts
+onMounted(async () => {
+  try {
+    const res = await fetch('/api')
+    backendMessage.value = await res.text()
+  } catch (error) {
+    backendMessage.value = 'Failed to fetch backend message.'
+  }
+})
 </script>
 
 <template>
+
+  <div style="margin: 2em 0; text-align: center;">
+    <h2>Backend Connection Test</h2>
+    <p>Backend says: <strong>{{ backendMessage }}</strong></p>
+  </div>
+
   <WelcomeItem>
     <template #icon>
       <DocumentationIcon />
