@@ -26,7 +26,9 @@ onMounted(async () => {
 
   <div style="margin: 2em 0; text-align: center;">
     <h2>Backend Connection Test</h2>
-    <p>Backend says: <strong>{{ backendMessage }}</strong></p>
+    <!-- <p>Backend says: <strong>{{ backendMessage }}</strong></p> -->
+    <p><strong>{{ backendMessage }}</strong></p>
+
   </div>
 <!-- 
   <WelcomeItem>

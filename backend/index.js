@@ -16,7 +16,7 @@ app.listen(PORT, () => {
 });
 
 app.get('/api', (req, res) => {
-  res.send('Hello from Node.js backend! api');
+  res.send('Connected to the API!');
 });
 
 app.post('/calc', (req, res) => {
