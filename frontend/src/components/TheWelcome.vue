@@ -14,6 +14,7 @@ const backendMessage = ref('')
 onMounted(async () => {
   try {
     const res = await fetch('/api')
+    //const res = await fetch('http://localhost:3000')
     backendMessage.value = await res.text()
   } catch (error) {
     backendMessage.value = 'Failed to fetch backend message.'
@@ -27,7 +28,7 @@ onMounted(async () => {
     <h2>Backend Connection Test</h2>
     <p>Backend says: <strong>{{ backendMessage }}</strong></p>
   </div>
-
+<!-- 
   <WelcomeItem>
     <template #icon>
       <DocumentationIcon />
@@ -109,4 +110,5 @@ onMounted(async () => {
     us by
     <a href="https://vuejs.org/sponsor/" target="_blank" rel="noopener">becoming a sponsor</a>.
   </WelcomeItem>
+-->
 </template>
