@@ -17,6 +17,13 @@ class CalcRequest(BaseModel):
     probability: float
     trials: int
 
+@app.get("/")
+def api():
+    return "'Hello from FastAPI backend!"
+
+@app.get("/api")
+def api():
+    return "Connected to the FastAPI!"
 
 @app.post("/calc")
 def calc(req: CalcRequest):

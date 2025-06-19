@@ -17,7 +17,7 @@ app.listen(PORT, () => {
 });
 
 app.get('/api', (req, res) => {
-  res.send('Connected to the API!');
+  res.send('Connected to the Node.js API!');
 });
 
 const calcRoutes = require('./routes/calc');
