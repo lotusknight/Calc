@@ -4,8 +4,7 @@ const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-
-
+// Middleware setup
 app.use(cors());
 app.use(express.json());
 
