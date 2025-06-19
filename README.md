@@ -6,5 +6,6 @@ This project provides an overview of a project that serves as a practice exercis
 
 - [Frontend (Vue.js)](./frontend/)
 - [Backend (Node.js)](./backend/)
+- [Backend (FastAPI)](./fastapi-backend/)
 
 For more details, see the [frontend README](./frontend/README.md) or [backend README](./backend/README.md).
