@@ -4,6 +4,8 @@ const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+
+
 app.use(cors());
 app.use(express.json());
 
@@ -19,21 +21,5 @@ app.get('/api', (req, res) => {
   res.send('Connected to the API!');
 });
 
-app.post('/calc', (req, res) => {
-  const { probability, trials } = req.body;
-
-  // Example calculation (replace with your real logic)
-  // Here, we create a geometric distribution as an example
-  let distribution = [];
-  let accumulatedProbability = 0;
-  for (let i = 1; i <= trials; i++) {
-    const prob = Math.pow(1 - probability, i - 1) * probability;
-    distribution.push(prob);
-    accumulatedProbability += prob;
-  }
-
-  res.json({
-    distribution,
-    accumulatedProbability,
-  });
-});
+const calcRoutes = require('./routes/calc');
+app.use('/calc', calcRoutes);
