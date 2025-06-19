@@ -5,7 +5,7 @@ This project provides an overview of a project that serves as a practice exercis
 ## Project Structure
 
 - [Frontend (Vue.js)](./frontend/)
-- [Backend (Node.js)](./backend/)
-- [Backend (FastAPI)](./fastapi-backend/)
+- [Backend (Node.js)](./backend-nodejs/)
+- [Backend (FastAPI)](./backend-fastapi/)
 
-For more details, see the [frontend README](./frontend/README.md) or [backend README](./backend/README.md).
+For more details, see the sub-dir.
