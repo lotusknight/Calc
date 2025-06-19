@@ -1,2 +1,3 @@
 pip install fastapi uvicorn
-uvicorn main:app --reload --port 3000
+chmod +x run.sh
+./run.sh
